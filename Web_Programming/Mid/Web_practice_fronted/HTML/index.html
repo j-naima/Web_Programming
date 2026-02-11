@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning</title>
+    <style>
+        body{
+            font-family: Arial;
+        }
+        h1{
+           color: blue;
+           text-align:center
+        }
+        div.infos{
+            text-align: center;
+            color: green;
+        }
+        span.info{
+            margin: 10px;
+        }
+
+        h3 > span{
+            font-weight: normal;   
+        }
+        .letters{
+            list-style-type: upper-alpha;
+        }
+        .romans{
+            list-style-type: upper-roman;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Meeting Agenda</h1>;
+    <hr>
+
+    <div class="infos"> 
+    <span class="info"><strong>Date:</strong>December 26,2025</span>
+    <span class="info"><strong>Time:</strong>11.00pm</span>
+    <span class="info"><strong>Location:</strong>Meet</span>
+    </div>
+
+    <!-- <p style="font-family: Times New Roman;">please come in home</p> -->
+    <hr>
+
+
+    <h3>Topic 1: <span>Title of first topic</span> </h3>
+    <ul>
+        <li>Discussion points with bullets</li>
+        <li>Second taking point</li>
+        <li>Third taking point</li>
+    </ul>
+
+    <h3>Topic 2: <span>Title of second topic</span></h3>
+    <ol>
+        <li>Discussion points with numbers</li>
+        <li>Second taking point</li>
+        <li>Third taking point</li>
+    </ol>
+
+    <h3>Topic 3:<span>Title of Third topic</span> </h3>
+    <ol class="letters">
+        <li>Discussion points with letters</li>
+        <li>Second taking point</li>
+        <li>Third taking point</li>
+    </ol>
+
+    <h3>Topic 4: <span>Title of fourth topic</span> </h3>
+    <ol class="romans">
+        <li>Discussion points with romans</li>
+        <li>Second taking point</li>
+        <li>Third taking point</li>
+    </ol>
+    <hr>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fariha</td>
+            <td>22</td>
+            <td>Dhaka</td>
+        </tr>
+        <tr>
+            <td>Mahi</td>
+            <td>22</td>
+            <td>Dhaka</td>
+        </tr>
+        <tr>
+            <td>Peri</td>
+            <td>22</td>
+            <td>Dhaka</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

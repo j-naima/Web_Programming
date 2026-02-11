@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 80%;
+    background: lightcyan;
+    margin: auto;
+    padding: 34px;
+}
+.container h2,p{
+    text-align: center;
+    font-family: 'sriracha, cursive';
+}
+p{
+    font-size: 17px;
+}
+input,textarea{
+    width: 80%;
+    padding: 8px;
+    margin: 10px auto;
+    font-size: 15px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+.submitmsg{
+    color:green;
+    font-size: 20px;
+}

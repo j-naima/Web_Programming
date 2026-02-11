@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #fefefe;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.left-panel {
+  width: 40%;
+}
+
+.slogan {
+  text-align: center;
+}
+
+.logo-img {
+  height: 65px;
+  margin-bottom: 20px;
+}
+
+.slogan {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.highlighted-text {
+  background: linear-gradient(135deg, #ff297b, #ff8c00);
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-img {
+  width: 55%;
+  margin-top: 15px;
+  margin-left: 22%;
+}
+
+.divider {
+  width: 2px;
+  background-color: #d0d0d0;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.right-panel {
+  width: 40%;
+}
+
+.form-wrapper {
+  padding: 28px 30px;
+  border-radius: 12px;
+}
+
+.form-wrapper h2 {
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.text-field {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  font-size: 14px;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 20px;
+  border: none;
+  background: #4aa5f9;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.recover {
+  font-size: 13px;
+  margin: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  color: #385185;
+}
+
+.facebook-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.facebook-btn img {
+  height: 14px;
+  margin-right: 5px;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: 1px solid #0095f6;
+  background: #fff;
+  color: #0095f6;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Meta Footer */
+.brand-meta {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  margin-top: 15px;
+}
+
+.brand-meta img {
+  height: 14px;
+  margin-right: 5px;
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Programming - Sign In</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;}
+    body{background:#fff;color:#111;}
+
+    /* ===== Top Bar ===== */
+    .topbar{
+      height:56px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 22px;
+      /*border-bottom:1px solid #e5e7eb;*/
+      background:#fff;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      color:#111;
+    }
+    .logo-box{
+      width:26px;height:26px;
+      border-radius:6px;
+      background:#111;
+      display:flex;align-items:center;justify-content:center;
+      color:#fff;font-size:14px;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      font-size:13px;
+      color:#374151;
+    }
+    .nav a{
+      text-decoration:none;
+      color:#374151;
+    }
+    .nav a:hover{ text-decoration:underline; }
+    .btn-trial{
+      border:none;
+      background:#0b77a6;
+      color:#fff;
+      padding:9px 14px;
+      border-radius:4px;
+      font-size:12px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    /* ===== Main Split ===== */
+    .wrap{
+      display:flex;
+    }
+    .left{
+      width:38%;
+      background:#0976a7;
+      color:#eaf6ff;
+      padding:34px 28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .left p{
+      line-height:1.7;
+      font-size:14px;
+      margin-top:10px;
+    }
+    .profile{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-top:22px;
+    }
+    .avatar{
+      width:48px;height:48px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.25);
+      border:2px solid rgba(255,255,255,0.35);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;
+      color:#fff;
+    }
+    .profile .name{ font-weight:700; font-size:13px; }
+    .profile .role{ font-size:11px; opacity:0.9; }
+
+    .right{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      padding:36px 24px;
+      background:#fff;
+    }
+    .card{
+      width:420px;
+      text-align:center;
+      padding-top:10px;
+    }
+
+    .card h2{
+      font-family: "Times New Roman", Times, serif;
+      font-size:18px;
+      margin-bottom:6px;
+      font-weight:700;
+    }
+    .sub{
+      font-size:12px;
+      color:#6b7280;
+      margin-bottom:18px;
+    }
+    .sub a{ color:#e90606; text-decoration:none; }
+    .sub a:hover{ text-decoration:underline; }
+
+    /* Social buttons */
+    .btn-wide{
+      width:100%;
+      border:1px solid #d1d5db;
+      background:#fff;
+      padding:10px 12px;
+      border-radius:4px;
+      font-size:12px;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      color:#374151;
+      margin-bottom:10px;
+    }
+    .icon{
+      width:16px;height:16px;border-radius:3px;
+      background:#e5e7eb;
+      display:inline-block;
+    }
+    .row-2{
+      display:flex;
+      gap:10px;
+      margin-bottom:12px;
+    }
+    .row-2 .btn-wide{ margin-bottom:0; }
+
+    .or{
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      gap:10px;
+      color:#9ca3af;
+      font-size:11px;
+      margin:14px 0;
+    }
+
+
+    /* Inputs */
+    .field{
+      width:100%;
+      margin-bottom:10px;
+      text-align:left;
+    }
+    .input{
+      width:100%;
+      height:40px;
+      border:1px solid #d1d5db;
+      border-radius:4px;
+      padding:0 12px;
+      font-size:12px;
+      outline:none;
+    }
+    .input:focus{
+      border-color:#9ca3af;
+      box-shadow:0 0 0 2px rgba(156,163,175,0.2);
+    }
+
+    .pw-row{
+      position:relative;
+    }
+    .show{
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      font-size:11px;
+      color:#6b7280;
+      cursor:pointer;
+    }
+
+    .forgot{
+      text-align:right;
+      font-size:11px;
+      margin-top:4px;
+    }
+    .forgot a{ color:#e90606; text-decoration:none; }
+    .forgot a:hover{ text-decoration:underline; }
+
+    .btn-signin{
+      width:100%;
+      height:40px;
+      border:none;
+      background:#e90606;
+      color:#fff;
+      font-weight:700;
+      font-size:12px;
+      border-radius:2px;
+      cursor:pointer;
+      margin:12px 0 10px;
+    }
+
+    .help{
+      font-size:11px;
+      color:#6b7280;
+      margin:6px 0;
+    }
+    .help a{ color:#e90606; text-decoration:none; }
+    .help a:hover{ text-decoration:underline; }
+
+    .terms{
+      margin-top:10px;
+      font-size:10px;
+      color:#9ca3af;
+      line-height:1.5;
+    }
+    .terms a{ color:#6b7280; text-decoration:underline; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo-box">W</div>
+      <div>CSE 4165 Web Programming</div>
+    </div>
+
+    <div class="nav">
+      <a href="#">Blog</a>
+      <a href="#">Docs</a>
+      <a href="#">Pricing</a>
+      <a href="#">Log In</a>
+      <button class="btn-trial">Start Free Trial</button>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="wrap">
+    <!-- Left panel -->
+    <div class="left">
+      <div>
+        <p>
+          “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.”
+        </p>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">P</div>
+        <div>
+          <div class="name">Niassoh Dihan</div>
+          <div class="role">Assistant Professor &amp; Program Coordinator, CSE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right panel -->
+    <div class="right">
+      <div class="card">
+        <h2>Sign in to your WEB<br/>PROGRAMMING account.</h2>
+        <div class="sub">
+          Don't have an account? <a href="#">Create one.</a>
+        </div>
+
+        <button class="btn-wide">
+          Sign in with Google
+        </button>
+
+        <div class="row-2">
+          <button class="btn-wide"> Continue with Apple</button>
+          <button class="btn-wide"> Continue with Facebook</button>
+        </div>
+
+        <div class="or"> OR </div>
+
+        <div class="field">
+          <input class="input" type="email" placeholder="Enter your email address" />
+        </div>
+
+        <div class="field pw-row">
+          <input class="input" type="password" placeholder="Enter your password" />
+          <div class="show">Show</div>
+          <div class="forgot"><a href="#">Forgot your password?</a></div>
+        </div>
+
+        <button class="btn-signin">SIGN IN</button>
+
+        <div class="help">
+          Need help? Check out our <a href="#">FAQs.</a>
+        </div>
+        <div class="help">
+          Visit niaid.org <a href="#">Connect your social account.</a>
+        </div>
+
+        <div class="terms">
+          You can unsubscribe from emails at any time. By signing up, you agree to our
+          <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

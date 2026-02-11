@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Template</title>
+
+    <style type="text/css">
+        body{
+            font-family: Arial;
+        }
+        .container{
+                display: flex;
+                flex-direction: column;
+                width: 200px;
+            }
+        .container > .title{
+            display: flex;
+            flex-direction: row;
+            align-items: center;;
+        }
+        .container > .title h2{
+            font-weight: normal;
+            color: gray;
+        }
+        .container > .title img{
+            margin: 10px;
+        }
+        .title{
+            border-bottom: 1px solid lightgray;
+        }
+
+        .container > .button{
+            display: flex;
+            margin: 10px;
+            align-items: center;
+            border: 1px solid lightgrey;
+            border-radius: 30px;
+            width: 130px;
+            padding: 5px;
+            box-shadow: 0px 2px 1px lightgray;
+        }
+        .container > .button span{
+            margin: 10px;
+            flex-grow: 1;
+            /* text-align: center; */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="title">
+            <img src="drivelogo.png" alt="Error" height="30px" width="30px">
+            <h2>Drive</h2>
+        </div>
+
+        <div class="button">
+            <img src="driveplus.png" height="40px" width="40px">
+            <!-- <img src="driveplus.png" alt="Error" > -->
+            <span>New</span>
+        </div>
+
+        <div>Priority</div>
+        <div>My Drive</div>
+        <div>Shared with me</div>
+        <div>Recent</div>
+        <div>Starred</div>
+        <div>Trash</div>
+        <div>Storage</div>
+        <div>121.38 GB used</div>
+    </div>
+</body>
+</html>
